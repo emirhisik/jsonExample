@@ -1,0 +1,18 @@
+[
+    {
+        "ID" : 1,
+        "Title" : "Apple iPhone 13 Pro Max",
+        "InternalStorage" : "1 TB",
+        "BatteryCapacity" : "4374 mAh",
+        "RAM" : "6 GB",
+        "ScreenSize": "6.7 inch"    
+},
+    {
+        "ID" : 2,
+        "Title" : "Samsung Galaxy Z Fold3 5G",
+        "InternalStorage" : "256 GB",
+        "BatteryCapacity" : "4400 mAh",
+        "RAM" : "12 GB",
+        "ScreenSize" : "6.2 İnç"
+}
+]
