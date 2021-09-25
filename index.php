@@ -26,9 +26,9 @@
                     <td> <?php echo $product["RAM"] ?> </td>
                     <td> <?php echo $product["ScreenSize"] ?> </td>
                     <td>
-                        <a href="view.php?id=<?php echo $product["ID"] ?>" class="btn btn-sm btn-outline-info">View</a>
-                        <a href="update.php?id=<?php echo $product["ID"] ?>" class="btn btn-sm btn-outline-secondary">Update</a>
-                        <a href="delete.php?id=<?php echo $product["ID"] ?>" class="btn btn-sm btn-outline-danger">Delete</a>
+                        <a href="view.php?id=<?php echo $product["id"] ?>" class="btn btn-sm btn-outline-info">View</a>
+                        <a href="update.php?id=<?php echo $product["id"] ?>" class="btn btn-sm btn-outline-secondary">Update</a>
+                        <a href="delete.php?id=<?php echo $product["id"] ?>" class="btn btn-sm btn-outline-danger">Delete</a>
                     </td>
                 </tr>
                 <?php } ?>

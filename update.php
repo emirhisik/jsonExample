@@ -15,6 +15,12 @@
         include 'notFound.php';
         exit;
     }
+
+    if($_SERVER["REQUEST_METHOD"] === "POST"){
+        updateProduct($_POST, $productID);
+
+        header("Location: index.php");
+    }
 ?>
 
 <div class="container">

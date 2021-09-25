@@ -7,7 +7,7 @@
     function getProductByID($ID){
         $products = getProducts();
         foreach($products as $product){
-            if($product["ID"] == $ID){
+            if($product["id"] == $ID){
                 return $product;
             }
         }
@@ -19,6 +19,14 @@
     }
 
     function updateProduct($data, $ID){
+        $products = getProducts();
+        foreach($products as $i => $product){
+            if($product["id"] == $ID){
+                $products[$i] = array_merge($product, $data);
+            }
+        }
+
+        file_put_contents(__DIR__."/products.json", json_encode($products));
 
     }
 
