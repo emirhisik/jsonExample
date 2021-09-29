@@ -4,10 +4,10 @@
         return json_decode(file_get_contents(__DIR__ . '/products.json'), true);
     }
 
-    function getProductByID($ID){
+    function getProductByID($id){
         $products = getProducts();
         foreach($products as $product){
-            if($product["id"] == $ID){
+            if($product["id"] == $id){
                 return $product;
             }
         }
@@ -16,21 +16,63 @@
 
     function createProduct($data){
 
+        $products = getProducts();
+
+        $data['id'] = rand(1000000, 2000000);
+
+        $products[] = $data;
+
+        putJson($products);
+
+        return $data;
     }
 
-    function updateProduct($data, $ID){
+    function updateProduct($data, $id){
+
+        $updateUser = [];
         $products = getProducts();
         foreach($products as $i => $product){
-            if($product["id"] == $ID){
-                $products[$i] = array_merge($product, $data);
+            if($product["id"] == $id){
+                $products[$i] = $updateUser = array_merge($product, $data);
             }
         }
 
-        file_put_contents(__DIR__."/products.json", json_encode($products));
+        return $updateUser;
 
     }
 
-    function deleteProduct($ID){
+    function deleteProduct($id){
+        $products = getProducts();
 
+        foreach($products as $i => $product){
+            if($product['id'] == $id){
+                array_splice($products, $i, 1);
+            }
+        }
+        putJson($products);
+    }
+
+    function uploadImage($file, $product){
+
+        if(isset($_FILES['picture']) && $_FILES['picture']['name']){
+        if(!is_dir(__DIR__ . "/images")){
+            mkdir(__DIR__ . "/images");
+        }
+
+        $fileName = $file['name'];
+
+        $dotPosition = strpos($fileName, '.');
+
+        $extension = substr($fileName, $dotPosition + 1);
+
+        move_uploaded_file($file["tmp_name"], __DIR__ . "/images/${product['id']}.$extension");
+
+        $product['extension'] = $extension;
+        updateProduct($product, $product['id']);
+    }
+    }
+
+    function putJson($products){
+        file_put_contents(__DIR__."/products.json", json_encode($products, JSON_PRETTY_PRINT));
     }
 ?>

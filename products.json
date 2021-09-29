@@ -1,23 +1,37 @@
 [
     {
         "id": 1,
-        "Title": "Apple iPhone 13 Pro Max",
-        "InternalStorage": "1 TB",
-        "BatteryCapacity": "4374 mAh",
-        "RAM": "6 GB",
-        "ScreenSize": "6.7 inch",
-        "title": "Apple iPhone 13 Pro Max +",
+        "title": "Apple iPhone 13 Pro Max 1",
         "internalStorage": "1 TB",
         "batteryCapacity": "4374 mAh",
         "ram": "6 GB",
-        "screenSize": "6.7 inch"
+        "screenSize": "6.7 inch",
+        "extension": "jpg"
     },
     {
         "id": 2,
-        "Title": "Samsung Galaxy Z Fold3 5G ",
-        "InternalStorage": "256 GB",
-        "BatteryCapacity": "4400 mAh",
-        "RAM": "12 GB",
-        "ScreenSize": "6.2 inch"
+        "title": "Samsung Galaxy Z Fold3 5G ",
+        "internalStorage": "256 GB",
+        "batteryCapacity": "4400 mAh",
+        "ram": "12 GB",
+        "screenSize": "6.2 inch",
+        "extension": "jpg"
+    },
+    {
+        "id": 3,
+        "title": "Huawei Mate Xs",
+        "internalStorage": "512 GB",
+        "batteryCapacity": "4500 mAh",
+        "ram": "8 GB",
+        "screenSize": "6.6 inch",
+        "extension": "jpg"
+    },
+    {
+        "title": "Apple iPhone 12 Pro Max",
+        "internalStorage": "512 GB",
+        "batteryCapacity": "3687 mAh",
+        "ram": "6 GB",
+        "screenSize": "6.7 \u0130n\u00e7",
+        "id": 1928969
     }
 ]
