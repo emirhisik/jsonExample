@@ -27,11 +27,12 @@
         "extension": "jpg"
     },
     {
-        "title": "Apple iPhone 12 Pro Max",
+        "title": "Apple iPhone 13 Pro",
         "internalStorage": "512 GB",
-        "batteryCapacity": "3687 mAh",
+        "batteryCapacity": "2815 mAh",
         "ram": "6 GB",
-        "screenSize": "6.7 \u0130n\u00e7",
-        "id": 1928969
+        "screenSize": "6.1 \u0130n\u00e7",
+        "id": 1869288,
+        "extension": "jpg"
     }
 ]

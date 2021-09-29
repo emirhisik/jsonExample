@@ -29,15 +29,17 @@
 
     function updateProduct($data, $id){
 
-        $updateUser = [];
+        $updateProduct = [];
         $products = getProducts();
         foreach($products as $i => $product){
             if($product["id"] == $id){
-                $products[$i] = $updateUser = array_merge($product, $data);
+                $products[$i] = $updateProduct = array_merge($product, $data);
             }
         }
 
-        return $updateUser;
+        putJson($products);
+
+        return $updateProduct;
 
     }
 
